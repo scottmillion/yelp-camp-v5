@@ -17,6 +17,8 @@ seedDB();
 // APP CONFIG
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+app.use(express.static('public'));
+
 
 // MONGOOSE MONGO CONFIG
 mongoose.connect('mongodb://localhost:27017/yelp-camp-v5', {
